@@ -1,0 +1,16 @@
+services:
+  web:
+    build: .
+    container_name: at_the_moment_app
+    ports:
+      - "5000:5000"
+    volumes:
+      # This maps the persistent Docker volume to the uploads folder inside the container
+      - image_data:/app/static/uploads
+    environment:
+      - PYTHONUNBUFFERED=1
+    restart: unless-stopped
+
+# Define the named volume managed by Docker
+volumes:
+  image_data:
