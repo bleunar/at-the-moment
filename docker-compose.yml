@@ -1,5 +1,5 @@
 services:
-  web:
+  atm:
     build: .
     container_name: at_the_moment_app
     ports:
