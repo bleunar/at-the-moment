@@ -1,9 +1,7 @@
 services:
-  atm:
+  atm_app:
     build: .
-    container_name: at_the_moment_app
-    ports:
-      - "5000:5000"
+    container_name: atm_app
     volumes:
       # This maps the persistent Docker volume to the uploads folder inside the container
       - image_data:/app/static/uploads
