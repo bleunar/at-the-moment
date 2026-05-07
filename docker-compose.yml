@@ -10,7 +10,13 @@ services:
     environment:
       - PYTHONUNBUFFERED=1
     restart: unless-stopped
+    networks:
+      - main-network
 
 # Define the named volume managed by Docker
 volumes:
   image_data:
+
+networks:
+  main-network:
+    external: true
